@@ -1,0 +1,193 @@
+body {
+  color:#fff;
+  background: radial-gradient(ellipse at bottom, #1C2837 0%, #050608 100%);
+  background-attachment:fixed;
+}
+#solar-system {
+  position: relative;
+  width: 800px;
+  height: 800px;
+  margin: auto;
+  padding: 50px;
+}
+.planet {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px dotted #222;
+  border-radius: 100%;
+  box-sizing: border-box;
+  &:after {
+    position: absolute;
+    border-radius: 100%;
+    border-style: none;
+    content: '';
+    box-sizing: border-box;
+  }
+}
+
+#neptune {
+  width: 800px;
+  height: 800px;
+  top: 20px;
+  left: 20px;
+  animation: circle 1600s linear infinite;
+  &:after{
+    width: 18px;
+    height: 18px;
+    background: linear-gradient(to top, #5e5ee9, #1b1b42);
+    border-width: 5px 0 0 0;
+    left: 350px;
+    top: -13px;
+  }
+}
+
+#uranus {
+  width: 730px;
+  height: 730px;
+  top: 60px;
+  left: 60px;
+  animation: circle 819s linear infinite;
+  &:after{
+    width: 18px;
+    height: 18px;
+    background: linear-gradient(to top, #9f45e9, #35154c);
+    border-width: 3px 0 0 0;
+    left: 300px;
+    top: -3px;
+  }
+}
+
+#saturn {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px dotted #222;
+  border-radius: 100%;
+  box-sizing: border-box;
+  width: 650px;
+  height: 650px;
+  top: 100px;
+  left: 100px;
+  animation: circle 293s linear infinite;
+  &:before {
+    position: absolute;
+    border-radius: 100%;
+    border-style: none;
+    content: '';
+    box-sizing: border-box;
+    width: 23px;
+    height: 23px;
+    background: linear-gradient(to top, #c5a371, #493d2a);
+    border-width: 5px 0 0 0;
+    left: 250px;
+    top: -13px;
+  }
+  &:after{
+    position: absolute;
+    width: 40px;
+    height: 10px;
+    border-radius: 100%;
+    border-color: #7e5e3d;
+    background: rgba(0,0,0,0);
+    border-style: solid;
+    border-width: 1px 3px 5px 3px;
+    content: '';
+    left: 238px;
+    top: -9px;
+  }
+}
+
+#jupiter {
+  width: 550px;
+  height: 550px;
+  top: 150px;
+  left: 150px;
+  animation: circle 118s linear infinite;
+  &:after{
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(to top, #8c7c41, #493d2a);
+    border-width: 3px 0 0 0;
+    left: 300px;
+    top: -13px;
+  }
+}
+
+#mars {
+  width: 350px;
+  height: 350px;
+  top: 250px;
+  left: 250px;
+  animation: circle 18s linear infinite;
+  &:after{
+    width: 10px;
+    height: 10px;
+    background: linear-gradient(to top, #ffa931, #7d5218);
+    border-width: 3px 0 0 0;
+    left: 150px;
+    top: -7px;
+  }
+}
+
+#earth {
+  width: 280px;
+  height: 280px;
+  top: 280px;
+  left: 280px;
+  animation: circle 10s linear infinite;
+  &:after{
+    width: 15px;
+    height: 15px;
+    background: linear-gradient(to top, #78c4ff, #1a2835);
+    border-width: 3px 0 0 0;
+    left: 100px;
+    top: -8px;
+  }
+}
+
+#venus {
+  width: 200px;
+  height: 200px;
+  top: 320px;
+  left: 320px;
+  animation: circle 6s linear infinite;
+  &:after{
+    width: 15px;
+    height: 15px;
+    background: linear-gradient(to top, #ff7c6e, #df1511);
+    border-width: 3px 0 0 0;
+    left: 50px;
+    top: -2px;
+  }
+}
+
+#mercury {
+  width: 150px;
+  height: 150px;
+  top: 350px;
+  left: 350px;
+  animation: circle 3s linear infinite;
+  &:after{
+    width: 5px;
+    height: 5px;
+    background: linear-gradient(to top, #ffc681, #4e3c26);
+    border-width: 3px 0 0 0;
+    left: 70px;
+    top: -3px;
+  }
+}
+
+#sun {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+  background:radial-gradient(ellipse at center, #ffd000 1%,#f9b700 39%,#f9b700 39%,#e06317 100%);
+  box-shadow: 0 0 10px 2px rgba(255, 107, 0, 0.4), 0 0 22px 11px rgba(255, 203, 0, 0.13);
+  left: 390px;
+  top: 390px;
+}
+
+@keyframes circle {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+}
